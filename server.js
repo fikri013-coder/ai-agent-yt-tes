@@ -11,7 +11,7 @@ app.use(express.json({ limit: "50mb" }));
 const PORT = process.env.PORT || 3000;
 
 // ─── Health check ────────────────────────────────────────────────────────────
-app.get("/", (_, res) => res.json({ status: "YouTube AI Agent Backend ✅" }));
+app.get("/", (_, res) => res.send("Home of the Railway API"));
 
 // ─── STEP 1: Research trending ───────────────────────────────────────────────
 app.post("/research", async (req, res) => {
